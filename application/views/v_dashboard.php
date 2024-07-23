@@ -188,14 +188,9 @@
               </p>
             </a>
           </li>
-          <li class="nav-item menu-open">
-            <a href="<?php echo base_url("c_data/data_advertising");?>" class="nav-link">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
-              <p>
-                Data Advertising
-              </p>
-            </a>
-          </li>
+          
+						<?php  $this->load->view('templates/data_page');?>
+          	<?php  $this->load->view('templates/table_page');?>
 
       </nav>
       <!-- /.sidebar-menu -->
