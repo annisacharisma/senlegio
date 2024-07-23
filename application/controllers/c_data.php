@@ -43,4 +43,36 @@ class C_data extends CI_Controller{
         );
         $this->load->view('v_admin_digiceleb', $data);
     }
+
+	function table_advertising(){
+        $tableadvertising = $this->m_data->tampil_table_advertising()->result();
+        $data = array(
+            'tabelmu' => $tableadvertising
+        );
+        $this->load->view('v_admin_table_adv', $data);
+    }
+
+	function table_animatedshorts(){
+        $tableanimatedshorts = $this->m_data->tampil_table_animatedshorts()->result();
+        $data = array(
+            'tabelmu' => $tableanimatedshorts
+        );
+        $this->load->view('v_admin_table_as', $data);
+    }
+
+	function table_visualeffects(){
+        $tablevisualeffects = $this->m_data->tampil_table_visualeffects()->result();
+        $data = array(
+            'tabelmu' => $tablevisualeffects
+        );
+        $this->load->view('v_admin_table_ve', $data);
+    }
+
+	function table_digiceleb(){
+        $tabledigiceleb = $this->m_data->tampil_table_digiceleb()->result();
+        $data = array(
+            'tabelmu' => $tabledigiceleb
+        );
+        $this->load->view('v_admin_table_dc', $data);
+    }
 }
