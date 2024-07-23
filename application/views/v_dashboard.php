@@ -232,14 +232,14 @@
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                <h3>150</h3>
+                <h3><?php echo $this->db->count_all("digiceleb"); ?></h3>
 
                 <p>Data Digiceleb</p>
               </div>
               <div class="icon">
                 <i class="ion ion-person"></i>
               </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="<?php echo base_url("c_data/data_digiceleb");?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
@@ -262,14 +262,14 @@
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                <h3><?php echo $this->db->count_all("admin"); ?></h3>
+                <h3><?php echo $this->db->count_all("visual_effects"); ?></h3>
 
                 <p>Data Visual Effects</p>
               </div>
               <div class="icon">
                 <i class="ion ion-camera"></i>
               </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="<?php echo base_url("c_data/data_visualeffects");?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
@@ -277,14 +277,14 @@
             <!-- small box -->
             <div class="small-box bg-lightblue">
               <div class="inner">
-                <h3>65</h3>
+                <h3><?php echo $this->db->count_all("animated_shorts"); ?></h3>
 
                 <p>Data Animated Shorts</p>
               </div>
               <div class="icon">
                 <i class="ion ion-android-film"></i>
               </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="<?php echo base_url("c_data/data_animatedshorts");?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
