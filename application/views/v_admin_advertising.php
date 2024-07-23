@@ -304,4 +304,3 @@
         </section>
         <!-- /.content -->
       </div>
-      <?php  $this->load->view('templates/footer_admin');?>
