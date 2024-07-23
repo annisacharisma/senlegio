@@ -219,6 +219,7 @@
               </li>
             </ul>  
           </li>
+          <?php  $this->load->view('templates/table_page');?>
 
         </nav>
         <!-- /.sidebar-menu -->
