@@ -54,7 +54,7 @@
             <a href="#" class="dropdown-item">
               <!-- Message Start -->
               <div class="media">
-                <img src="dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+                <img src="<?php echo base_url(); ?>assets/admin/dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
                 <div class="media-body">
                   <h3 class="dropdown-item-title">
                     Brad Diesel
@@ -70,7 +70,7 @@
             <a href="#" class="dropdown-item">
               <!-- Message Start -->
               <div class="media">
-                <img src="dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+                <img src="<?php echo base_url(); ?>assets/admin/dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
                 <div class="media-body">
                   <h3 class="dropdown-item-title">
                     John Pierce
@@ -86,7 +86,7 @@
             <a href="#" class="dropdown-item">
               <!-- Message Start -->
               <div class="media">
-                <img src="dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+                <img src="<?php echo base_url(); ?>assets/admin/dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
                 <div class="media-body">
                   <h3 class="dropdown-item-title">
                     Nora Silvester
@@ -147,7 +147,7 @@
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
       <!-- Brand Logo -->
       <a href="index3.html" class="brand-link">
-        <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+        <img src="<?php echo base_url(); ?>assets/admin/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
         <span class="brand-text font-weight-light">AdminLTE 3</span>
       </a>
 
@@ -156,7 +156,7 @@
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
           <div class="image">
-            <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+            <img src="<?php echo base_url(); ?>assets/admin/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
           </div>
           <div class="info">
             <a class="d-block"><?php echo $this->session->userdata("nama"); ?></a>
@@ -189,39 +189,12 @@
             </a>
           </li>
           <li class="nav-item menu-open">
-            <a href="#" class="nav-link">
+            <a href="<?php echo base_url("c_data/data_advertising");?>" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
-                Data Page
-                <i class="fas fa-angle-left right"></i>
+                Data Advertising
               </p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="<?php echo base_url("c_data/data_advertising");?>" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Data Advertising</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="<?php echo base_url("c_data/data_animatedshorts");?>" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Data Animated Shorts</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="<?php echo base_url("c_data/data_visualeffects");?>" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Data Visual Effects</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="<?php echo base_url("c_data/data_digiceleb");?>" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Data Digital Celebrity</p>
-                </a>
-              </li>
-            </ul>  
           </li>
 
       </nav>
@@ -257,14 +230,14 @@
         <div class="row">
           <div class="col-lg-3 col-6">
             <!-- small box -->
-            <div class="small-box bg-warning">
+            <div class="small-box bg-info">
               <div class="inner">
                 <h3>150</h3>
 
-                <p>New Orders</p>
+                <p>Data Digiceleb</p>
               </div>
               <div class="icon">
-                <i class="ion ion-bag"></i>
+                <i class="ion ion-person"></i>
               </div>
               <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
@@ -272,29 +245,29 @@
           <!-- ./col -->
           <div class="col-lg-3 col-6">
             <!-- small box -->
-            <div class="small-box bg-success">
+            <div class="small-box bg-lightblue">
               <div class="inner">
                 <h3><?php echo $this->db->count_all("advertising"); ?></h3>
 
                 <p>Data Adversiting</p>
               </div>
               <div class="icon">
-                <i class="ion ion-stats-bars"></i>
+                <i class="ion ion-bag"></i>
               </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="<?php echo base_url("c_data/data_advertising");?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
           <div class="col-lg-3 col-6">
             <!-- small box -->
-            <div class="small-box bg-warning">
+            <div class="small-box bg-info">
               <div class="inner">
                 <h3><?php echo $this->db->count_all("admin"); ?></h3>
 
-                <p>Data Admin</p>
+                <p>Data Visual Effects</p>
               </div>
               <div class="icon">
-                <i class="ion ion-person-add"></i>
+                <i class="ion ion-camera"></i>
               </div>
               <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
@@ -302,14 +275,14 @@
           <!-- ./col -->
           <div class="col-lg-3 col-6">
             <!-- small box -->
-            <div class="small-box bg-danger">
+            <div class="small-box bg-lightblue">
               <div class="inner">
                 <h3>65</h3>
 
-                <p>Unique Visitors</p>
+                <p>Data Animated Shorts</p>
               </div>
               <div class="icon">
-                <i class="ion ion-pie-graph"></i>
+                <i class="ion ion-android-film"></i>
               </div>
               <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
