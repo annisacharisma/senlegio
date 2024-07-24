@@ -28,9 +28,13 @@ class C_senlegio extends CI_Controller {
     }
 
     public function show_visualeffect()
-    {
-        $this->load->view('visualeffect');
-    }
+	{
+		$datavisualeffect = $this->m_data->tampil_data_visualeffects()->result();
+		$data = array(
+			'datamu' => $datavisualeffect
+		);
+		$this->load->view('visualeffect', $data);
+	}
 
     public function show_ourprocess()
     {
@@ -55,10 +59,12 @@ class C_senlegio extends CI_Controller {
         $this->load->view('advertising', $data);
     }
 
-    public function show_ve_project()
-    {
-        $this->load->view('visualeffect_TheMoors');
-    }
+    public function show_ve_project($id_ve)
+	{
+		$where = array('id_ve' => $id_ve);
+		$data['visualeffect'] = $this->m_data->tampil_visualeffect_indie($where, 'visual_effects')->result();
+		$this->load->view('visualeffect_TheMoors', $data);
+	}
 
     public function show_adv_project($id_adv)
     {
