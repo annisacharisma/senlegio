@@ -24,6 +24,10 @@ class M_data extends CI_Model{
     function tampil_data_digiceleb(){
         return $this->db->get('digiceleb');
     }
+	
+    function tampil_digiceleb_indie($where, $table){
+        return $this->db->get_where($table, $where);
+    }
 
     function tampil_table_advertising(){
         return $this->db->get('advertising');
