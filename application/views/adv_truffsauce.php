@@ -80,6 +80,9 @@ foreach($advertising as $u){
             </div>
           </div>
         </div>
+        
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
       </section>
       <?php } ?>
       <?php  $this->load->view('templates/Footer');?>
