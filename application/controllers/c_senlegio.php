@@ -1,56 +1,77 @@
-<!-- khusus controller -->
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class C_senlegio extends CI_Controller {
-	public function index()
-	{
-		$this->load->view('index');
-	}
-    
-	public function show_career()
-	{
-		$this->load->view('career');
-	}
-    public function show_digiceleb()
-	{
-		$this->load->view('digiceleb');
-	}
-    public function show_visualeffect()
-	{
-		$this->load->view('visualeffect');
-	}
-    public function show_ourprocess()
-	{
-		$this->load->view('ourprocess');
-	}
-    public function show_animatedshorts()
-	{
-		$this->load->view('animatedshorts');
-	}
-    public function show_advertising()
-	{
-		$this->load->view('advertising');
-	}
-	public function show_ve_project()
-	{
-		$this->load->view('visualeffect_TheMoors');
-	}
-	public function show_adv_project()
-	{
-		$this->load->view('adv_truffsauce');
-	}
-	public function show_as_project1()
-	{
-		$this->load->view('shorts_Handlebar');
-	}
-	public function show_as_project2()
-	{
-		$this->load->view('shorts_MarvelvsDC');
-	}
-	public function show_contact()
-	{
-		$this->load->view('index');
-	}
-}
+    function __construct(){
+        parent::__construct();		
+        $this->load->model('m_data');
+        $this->load->helper('url');
+    }
 
+    public function index()
+    {
+        $this->load->view('index');
+    }
+	
+    public function show_career()
+    {
+        $this->load->view('career');
+    }
+
+    public function show_digiceleb()
+    {
+        $this->load->view('digiceleb');
+    }
+
+    public function show_visualeffect()
+    {
+        $this->load->view('visualeffect');
+    }
+
+    public function show_ourprocess()
+    {
+        $this->load->view('ourprocess');
+    }
+
+    public function show_animatedshorts()
+    {
+        $dataanimatedshorts = $this->m_data->tampil_data_animatedshorts()->result();
+        $data = array(
+            'datamu' => $dataanimatedshorts
+        );
+        $this->load->view('animatedshorts', $data);
+    }
+
+    public function show_advertising()
+    {
+        $dataadvertising = $this->m_data->tampil_data_advertising()->result();
+        $data = array(
+            'datamu' => $dataadvertising
+        );
+        $this->load->view('advertising', $data);
+    }
+
+    public function show_ve_project()
+    {
+        $this->load->view('visualeffect_TheMoors');
+    }
+
+    public function show_adv_project($id_adv)
+    {
+        $where = array('id_adv' => $id_adv);
+        $data['advertising'] = $this->m_data->tampil_advertising_indie($where, 'advertising')->result();
+        $this->load->view('adv_truffsauce', $data);
+    }
+
+    public function show_as_project($id_as)
+    {
+        $where = array('id_as' => $id_as);
+        $data['animated_shorts'] = $this->m_data->tampil_animatedshorts_indie($where, 'animated_shorts')->result();
+        $this->load->view('shorts_Handlebar', $data);
+    }
+
+    public function show_contact()
+    {
+        $this->load->view('index');
+    }
+}
