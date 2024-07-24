@@ -50,54 +50,15 @@
                         </div>
                     </div>
                 <?php } ?>
+                <div class="col-12 col-lg-3 d-flex flex-column justify-content-center align-items-center">
+                <div class="image-wrapper">
+                    <img src="<?php echo base_url(); ?>assets/images/comingSoon.png" alt="Coming Soon" style="height: 19rem; width: 15rem; object-fit: cover;">
+                    <p class="mbr-text mbr-fonts-style mt-2 align-center display-7">
+                        <strong>COMING SOON</strong>
+                    </p>
+                </div>
+            </div>
             </div>
         </div>
 </section>
-
-<!-- <section data-bs-version="5.1" class="gallery3 cid-ui5WWCnxYJ" id="gallery03-2q">
-    
-    
-    <div class="container-fluid">
-      <div class="row justify-content-center">
-        <div class="col-12 content-head">
-          
-        </div>
-      </div>
-      <div class="row justify-content-center">
-        <div class="item features-image col-12 col-md-6 col-lg-3 d-flex flex-column justify-content-center align-items-center">
-          <div class="item-wrapper">
-            <div class="item-img">
-              <a href="<?php echo base_url("c_senlegio/show_as_project2"); ?>"><img src="<?php echo base_url(); ?>assets/images/still-001-712x300.png" title="" data-slide-to="0" data-bs-slide-to="0" style="height: 19rem; width: 15rem; object-fit: cover;"></a>
-              <p class="item-title mbr-fonts-style mt-2 mb-2 align-center display-7">
-                <strong>MARVEL VS DC</strong></p>
-              
-            </div>
-          </div>
-        </div>
-        <div class="item features-image col-12 col-md-6 col-lg-3 d-flex flex-column justify-content-center align-items-center">
-          <div class="item-wrapper">
-            <div class="item-img">
-              <a href="<?php echo base_url("c_senlegio/show_as_project1"); ?>"><img src="<?php echo base_url(); ?>assets/images/header-1-712x300.png" title="" data-slide-to="1" data-bs-slide-to="1" style="height: 19rem; width: 15rem; object-fit: cover;"></a>
-              <p class="item-title mbr-fonts-style mt-2 mb-2 display-7">
-                <strong>HANDLEBAR</strong></p>
-              
-            </div>
-          </div>
-        </div>
-        <div class="item features-image col-12 col-md-6 col-lg-3 d-flex flex-column justify-content-center align-items-center">
-          <div class="item-wrapper">
-            <div class="item-img">
-              <img src="<?php echo base_url(); ?>assets/images/comingSoon.png" title="" data-slide-to="2" data-bs-slide-to="2" style="height: 19rem; width: 15rem; object-fit: cover;">
-              <p class="item-title mbr-fonts-style mt-2 mb-2 display-7">
-                <strong>COMING SOON</strong></p>
-              
-              
-            </div>
-          </div>
-        </div>
-        
-      </div>
-    </div>
-  </section> -->
-
-  <?php  $this->load->view('templates/Footer');?>
+<?php  $this->load->view('templates/Footer');?>
