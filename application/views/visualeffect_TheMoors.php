@@ -1,5 +1,8 @@
 <?php  $this->load->view('templates/Header');?>
-<section data-bs-version="5.1" class="info1 cid-ui5QtcUUBP" id="info1-2i">
+<?php 
+foreach($visualeffect as $u){ 
+  ?>
+<section data-bs-version="5.1" class="info1 cid-ui5QtcUUBP" id="info1-2i" style="background-image: url('<?php echo base_url('assets/'.$u->bg_ve); ?>');">
     
 
     
@@ -7,7 +10,7 @@
         <div class="row justify-content-center">
             <div class="col-12 col-lg-8">
                 <h3 class="mbr-section-title mb-4 mbr-fonts-style display-1">
-                    <strong>The Moors</strong></h3>
+                    <strong><?php echo $u->title_ve ?></strong></h3>
                 
             </div>
         </div>
@@ -24,7 +27,7 @@
                 <div class="card-wrapper">
                     <div class="card-box align-left">
                         
-                        <p class="mbr-text mbr-fonts-style mt-4 display-7">Senlegio Studio had the incredible opportunity to contribute to this ambitious short film. Over the course of the project, we meticulously worked on more than 20 shots, delivering high-quality visual effects. Our tasks included greenscreen replacement, CG replacement, removals, and various other FX elements. Each shot required careful attention to detail and a commitment to excellence, showcasing our expertise and dedication to pushing the boundaries of what's possible in 3D animation and visual effects</p>
+                        <p class="mbr-text mbr-fonts-style mt-4 display-7"><?php echo $u->description_ve ?></p>
                         
                     </div>
                 </div>
@@ -34,39 +37,48 @@
 </section>
 
 <section data-bs-version="5.1" class="image4 cid-ui5QtdwexV" id="image4-2k">
+
     <div class="container-fluid">
         <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="row d-flex justify-content-center align-items-center text-center">
-                        <div class="col-lg-6">
-                            <div class="image-wrapper">
-                                <img src="<?php echo base_url(); ?>assets/images/themoors_images4.png" alt="Loading Image" style="max-width: 80%; height: auto; margin-right:20%;">
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="image-wrapper">
-                                <img src="<?php echo base_url(); ?>assets/images/themoors_images2.png" alt="Loading Image" style="max-width: 80%; height: auto; margin-left:20%;">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="row d-flex justify-content-center align-items-center text-center">
-                        <div class="col-lg-6">
-                            <div class="image-wrapper">
-                                <img src="<?php echo base_url(); ?>assets/images/themoors_images6.png" alt="Loading Image" style="max-width: 80%; height: auto; margin-right:20%;">
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="image-wrapper">
-                                <img src="<?php echo base_url(); ?>assets/images/themoors_images5.png" alt="Loading Image" style="max-width: 80%; height: auto; margin-left:20%;">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div>
+            <?php
+                    $images = [
+                        $u->image_ve1,
+                        $u->image_ve2,
+                        $u->image_ve3,
+                        $u->image_ve4,
+                    ];
+                    $active_set = false;
+
+                    for ($i = 0; $i < count($images); $i += 2) {
+                        if (!empty($images[$i]) || !empty($images[$i + 1])) {
+                            $active_class = !$active_set ? ' active' : '';
+                            $active_set = true;
+                            echo "<div class='carousel-item{$active_class}'>
+                                    <div class='row d-flex justify-content-center align-items-center text-center'>";
+
+                            if (!empty($images[$i])) {
+                                echo "<div class='col-lg-6'>
+                                        <div class='image-wrapper'>
+                                            <img src='" . base_url('assets/' .$images[$i]) . "' alt='Loading Image' style='max-width: 80%; height: auto; margin-right:20%;'>
+                                        </div>
+                                    </div>";
+                            }
+
+                            if (!empty($images[$i + 1])) {
+                                echo "<div class='col-lg-6'>
+                                        <div class='image-wrapper'>
+                                            <img src='" . base_url('assets/' .$images[$i + 1]) . "' alt='Loading Image' style='max-width: 80%; height: auto; margin-left:20%;'>
+                                        </div>
+                                    </div>";
+                            }
+
+                            echo "</div></div>";
+                        }
+                    }
+                    ?>
+                     </div>
+                <div>
                 <button class="carousel-control-prev" role="button" data-bs-target="#imageCarousel" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true" style="filter: invert(0) grayscale(100%) brightness(0); width: 20px; height: 20px;"></span>
                 </button>
@@ -76,65 +88,42 @@
             </div>                    
         </div>        
     </div>
-</section>
+    </section>
 
 <section data-bs-version="5.1" class="video2 cid-ui64Cl95Pz" id="video2-2s">
     
     <div class="container-fluid">
         <div id="videoCarousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="col-12 col-md-9 mx-auto video-block d-flex flex-column justify-content-center align-items-center">
-                        <div class="video-wrapper">
-                            <video class="video-play w-100" controls autoplay muted>
-                                <source src="<?php echo base_url(); ?>assets/images/Breakdown_the moors1.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                            </video>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="col-12 col-md-9 mx-auto video-block d-flex flex-column justify-content-center align-items-center">
-                        <div class="video-wrapper">
-                            <video class="video-play w-100" controls autoplay muted>
-                                <source src="<?php echo base_url(); ?>assets/images/Breakdown_the moors2.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                            </video>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="col-12 col-md-9 mx-auto video-block d-flex flex-column justify-content-center align-items-center">
-                        <div class="video-wrapper">
-                            <video class="video-play w-100" controls autoplay muted>
-                                <source src="<?php echo base_url(); ?>assets/images/Breakdown_the moors3.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                            </video>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="col-12 col-md-9 mx-auto video-block d-flex flex-column justify-content-center align-items-center">
-                        <div class="video-wrapper">
-                            <video class="video-play w-100" controls autoplay muted>
-                                <source src="<?php echo base_url(); ?>assets/images/Breakdown_the moors4.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                            </video>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="col-12 col-md-9 mx-auto video-block d-flex flex-column justify-content-center align-items-center">
-                        <div class="video-wrapper">
-                            <video class="video-play w-100" controls autoplay muted>
-                                <source src="<?php echo base_url(); ?>assets/images/Breakdown_the moors5.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                            </video>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+            <?php
+                $videos = [
+                    $u->video_ve1,
+                    $u->video_ve2,
+                    $u->video_ve3,
+                    $u->video_ve4,
+                    $u->video_ve5,
+                ];
+                $active_set = false;
+
+                
+                foreach ($videos as $video) {
+                    if (!empty($video)) {
+                        $active_class = !$active_set ? ' active' : '';
+                        $active_set = true;
+                        echo "<div class='carousel-item{$active_class}'>
+                                <div class='col-12 col-md-9 mx-auto video-block d-flex flex-column justify-content-center align-items-center'>
+                                    <div class='video-wrapper'>
+                                        <video class='video-play w-100' controls autoplay muted>
+                                            <source src='" . base_url('assets/' . $video) . "' type='video/mp4'>
+                                            Your browser does not support the video tag.
+                                        </video>
+                                    </div>
+                                </div>
+                              </div>";
+                    }
+                }
+                ?>
+
             <button class="carousel-control-prev" type="button" data-bs-target="#videoCarousel" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true" style="filter: invert(0) grayscale(100%) brightness(0); top: 50%; transform: translateY(-50%); right: 30px; width: 20px; height: 20px; position: absolute;"></span>
                 <span class="visually-hidden">Previous</span>
@@ -149,5 +138,5 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
 </section>
-
+<?php } ?>
 <?php  $this->load->view('templates/Footer');?>
