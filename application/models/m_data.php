@@ -21,6 +21,10 @@ class M_data extends CI_Model{
         return $this->db->get('visual_effects');
     } 
 
+function tampil_visualeffect_indie($where, $table){
+        return $this->db->get_where($table, $where);
+    }
+	
     function tampil_data_digiceleb(){
         return $this->db->get('digiceleb');
     }
