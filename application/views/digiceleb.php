@@ -36,30 +36,31 @@
     </div>
 </section>
 
-<section data-bs-version="5.1" class="image4 cid-ui1jUDwZQC" id="image4-v">
-    
-
-    
-    
-
-    <div class="container-fluid">
-        <div class="row justify-content-center">
-            <div class="col-12 col-lg-3 d-flex flex-column justify-content-center align-items-center">
+<section data-bs-version="5.1" class="gallery3 cid-ui5WWCnxYJ" id="gallery03-2q">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <?php 
+                $no = 1;
+                foreach($datamu as $u){ 
+                  ?>
+                  <div class="col-12 col-lg-3 d-flex flex-column justify-content-center align-items-center">
+                    <div class="image-wrapper">
+                        <a href="<?php echo site_url('c_senlegio/show_digiceleb_project/'.$u->id_dc); ?>"><img src="<?php echo base_url('assets/'.$u->poster_dc); ?>" alt="Image" style="height: 19rem; width: 15rem; object-fit: cover;"></a>
+                        <p class="mbr-text mbr-fonts-style mt-2 align-center display-7">
+                            <strong><?php echo $u->title_dc ?></strong></p>
+                        </div>
+                    </div>
+                <?php } ?>
+                <div class="col-12 col-lg-3 d-flex flex-column justify-content-center align-items-center">
                 <div class="image-wrapper">
-                    <img src="<?php echo base_url(); ?>assets/images/comingSoon.png" alt="Mobirise Website Builder" style="height: 19rem; width: 15rem; object-fit: cover;">
+                    <img src="<?php echo base_url(); ?>assets/images/comingSoon.png" alt="Coming Soon" style="height: 19rem; width: 15rem; object-fit: cover;">
                     <p class="mbr-text mbr-fonts-style mt-2 align-center display-7">
-                        <strong>COMING SOON</strong></p>
+                        <strong>COMING SOON</strong>
+                    </p>
                 </div>
             </div>
-            <div class="col-12 col-lg-3 d-flex flex-column justify-content-center align-items-center">
-                <div class="image-wrapper">
-                    <a href="digiceleb_adam.html"><img src="<?php echo base_url(); ?>assets/images/showcase-03-1101x826.png" alt="Mobirise Website Builder" style="height: 19rem; width: 15rem; object-fit: cover;"></a>
-                    <p class="mbr-text mbr-fonts-style mt-2 align-center display-7">
-                        <strong>ADAM</strong></p>
-                </div>
             </div>
         </div>
-    </div>
 </section>
 
 <?php  $this->load->view('templates/Footer');?>
