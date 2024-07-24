@@ -138,7 +138,7 @@
                         <td><?php echo $no++ ?></td>
                         <td><?php echo $u->id_adv ?></td>
                         <td><?php echo $u->title_adv ?></td>
-                        <td><img src="<?php echo base_url('assets/images/' . $u->poster_adv); ?>" alt="<?php echo $u->title_adv; ?>" style="width: 100px; height: auto;"></td>
+                        <td><img src="<?php echo base_url('assets/' . $u->poster_adv); ?>" alt="<?php echo $u->title_adv; ?>" style="width: 100px; height: auto;"></td>
                         <td>
                           <a href="<?php echo site_url('crud/edit/'.$u->id_adv); ?>" class="btn btn-warning a-btn-slide-text">
                             <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> 
