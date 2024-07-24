@@ -37,9 +37,34 @@
 </section>
 
 <section data-bs-version="5.1" class="gallery3 cid-ui5XRubJeu" id="gallery03-2r">
+   
+<div class="container-fluid">
+    <div class="row justify-content-center" style="gap: 1;">
+            <?php 
+                $no = 1;
+                foreach($datamu as $u){ 
+                  ?>
+        <div class="col-12 col-lg-3 d-flex flex-column justify-content-center align-items-center">
+            <div class="image-wrapper">
+              <a href="<?php echo site_url('c_senlegio/show_ve_project/'.$u->id_ve); ?>"><img src="<?php echo base_url('assets/'.$u->poster_ve); ?>" style="height: 19rem; width: 15rem; object-fit: cover;"></a>
+                <p class="mbr-text mbr-fonts-style mt-2 align-center display-7">
+                    <strong><?php echo $u->title_ve?></strong> </p>
+            </div>
+        </div>
+        <?php } ?>
+        <div class="col-12 col-lg-3 d-flex flex-column justify-content-center align-items-center">
+                <div class="image-wrapper">
+                    <img src="<?php echo base_url(); ?>assets/images/comingSoon.png" alt="Coming Soon" style="height: 19rem; width: 15rem; object-fit: cover;">
+                    <p class="mbr-text mbr-fonts-style mt-2 align-center display-7">
+                        <strong>COMING SOON</strong>
+                    </p>
+                </div>
+            </div>
+    </div>
+</div>
+  </section>
     
-    
-  <div class="container-fluid">
+  <!-- <div class="container-fluid">
     <div class="row justify-content-center" style="gap: 1;">
         <div class="col-12 col-lg-3 d-flex flex-column justify-content-center align-items-center">
             <div class="image-wrapper">
@@ -58,6 +83,6 @@
       </div>
     </div>
 </div>
-  </section>
+  </section> -->
 
   <?php  $this->load->view('templates/Footer');?>
