@@ -20,7 +20,11 @@ class C_senlegio extends CI_Controller {
 
     public function show_digiceleb()
     {
-        $this->load->view('digiceleb');
+        $datadigiceleb = $this->m_data->tampil_data_digiceleb()->result();
+	$data = array(
+	'datamu' => $datadigiceleb
+	);
+	$this->load->view('digiceleb', $data);
     }
 
     public function show_visualeffect()
@@ -70,6 +74,12 @@ class C_senlegio extends CI_Controller {
         $this->load->view('shorts_Handlebar', $data);
     }
 
+    public function show_digiceleb_project($id_dc)
+    {
+	$where = array('id_dc' => $id_dc);
+	$data['digiceleb'] = $this->m_data->tampil_digiceleb_indie($where, 'digiceleb')->result();
+	$this->load->view('digiceleb_adam', $data);
+    }
     public function show_contact()
     {
         $this->load->view('index');
