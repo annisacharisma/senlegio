@@ -36,7 +36,7 @@
         </div>
     </section>
 
-    <section data-bs-version="5.1" class="image4 cid-ui1kM96aJl" id="image4-10">
+    <section data-bs-version="5.1" class="gallery3 cid-ui5WWCnxYJ" id="gallery03-2q">
         <div class="container-fluid">
             <div class="row justify-content-center">
                 <?php 
@@ -51,8 +51,36 @@
                         </div>
                     </div>
                 <?php } ?>
+                <div class="col-12 col-lg-3 d-flex flex-column justify-content-center align-items-center">
+                <div class="image-wrapper">
+                    <img src="<?php echo base_url(); ?>assets/images/comingSoon.png" alt="Coming Soon" style="height: 19rem; width: 15rem; object-fit: cover;">
+                    <p class="mbr-text mbr-fonts-style mt-2 align-center display-7">
+                        <strong>COMING SOON</strong>
+                    </p>
+                </div>
             </div>
         </div>
 </section>
 
-<?php  $this->load->view('templates/Footer');?>
+<!-- <section data-bs-version="5.1" class="image4 cid-ui1kM96aJl" id="image4-10">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-3 d-flex flex-column justify-content-center align-items-center">
+                <div class="image-wrapper">
+                    <img src="<?php echo base_url(); ?>assets/images/comingSoon.png" style="height: 19rem; width: 15rem; object-fit: cover;">
+                    <p class="mbr-text mbr-fonts-style mt-2 align-center display-7">
+                        <strong>COMING SOON</strong></p>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-3 d-flex flex-column justify-content-center align-items-center">
+                    <div class="image-wrapper">
+                        <a href="<?php echo base_url("c_senlegio/show_adv_project");?>"><img src="<?php echo base_url(); ?>assets/images/stills_1.1.1.png" style="height: 19rem; width: 15rem; object-fit: cover;"></a>
+                        <p class="mbr-text mbr-fonts-style mt-2 align-center display-7">
+                            <strong>TRUFF SAUCE</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <?php  $this->load->view('templates/Footer');?>
