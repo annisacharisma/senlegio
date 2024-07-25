@@ -94,7 +94,7 @@
         <div class="container-fluid">
           <div class="row mb-2">
             <div class="col-sm-6">
-              <h1 class="m-0">Data Animated Shortsy</h1>
+              <h1 class="m-0">Data Animated Shorts</h1>
             </div><!-- /.col -->
             <div class="col-sm-6">
               <ol class="breadcrumb float-sm-right">
@@ -129,27 +129,33 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <?php 
+                  <?php 
+                    if(!empty($datamu)) {
                     $no = 1;
                     foreach($datamu as $u){ 
-                      ?>
+                    ?>
                       <tr>
                         <td><?php echo $no++ ?></td>
                         <td><?php echo $u->id_as ?></td>
                         <td><?php echo $u->title_as ?></td>
-                        <td><img src="<?php echo base_url('assets/' . $u->poster_as); ?>" alt="<?php echo $u->title_as; ?>" style="width: 100px; height: auto;"></td>
+                        <td><img src="<?php echo base_url('assets/images/' . $u->poster_as); ?>" alt="<?php echo $u->title_as; ?>" style="width: 100px; height: auto;"></td>
                         <td>
                           <a href="<?php echo site_url('crud/edit/'.$u->id_as); ?>" class="btn btn-warning a-btn-slide-text">
                             <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> 
                             <span><strong>Edit</strong></span>
                           </a>
-                          <a href="<?php echo site_url('crud/hapus/'.$u->id_as); ?>" class="btn btn-danger a-btn-slide-text">
-                            <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> 
-                            <span><strong>Hapus</strong></span>
+                          <a href="<?php echo site_url('c_admin2/data_animatedshorts?hapus_as='.$u->id_as); ?>" class="btn btn-danger a-btn-slide-text">
+                          <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> 
+                          <span><strong>Hapus</strong></span>
                           </a>
                         </td>
                       </tr>
-                    <?php } ?>
+                      <?php 
+                                        }
+                                    } else {
+                                        echo "<tr><td colspan='5'>No data available</td></tr>";
+                                    }
+                                    ?>
                   </tbody>
                 </table>
               </div>
