@@ -55,7 +55,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link active">
+                <a href="<?php echo base_url("c_data/data_advertising");?>" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Data Advertising</p>
                 </a>
@@ -73,7 +73,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?php echo base_url("c_data/data_digiceleb");?>" class="nav-link">
+                <a href="#" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Data Digital Celebrity</p>
                 </a>
@@ -81,7 +81,6 @@
             </ul>  
           </li>
           <?php  $this->load->view('templates/table_page');?>
-
         </nav>
         <!-- /.sidebar-menu -->
       </div>
@@ -95,7 +94,7 @@
         <div class="container-fluid">
           <div class="row mb-2">
             <div class="col-sm-6">
-              <h1 class="m-0">Data Advertising</h1>
+              <h1 class="m-0">Data Digital Celebrity</h1>
             </div><!-- /.col -->
             <div class="col-sm-6">
               <ol class="breadcrumb float-sm-right">
@@ -131,26 +130,32 @@
                   </thead>
                   <tbody>
                     <?php 
-                    $no = 1;
-                    foreach($datamu as $u){ 
-                      ?>
+                    if(!empty($datamu)) {
+                      $no = 1;
+                      foreach($datamu as $u){ 
+                    ?>
                       <tr>
                         <td><?php echo $no++ ?></td>
-                        <td><?php echo $u->id_adv ?></td>
-                        <td><?php echo $u->title_adv ?></td>
-                        <td><img src="<?php echo base_url('assets/' . $u->poster_adv); ?>" alt="<?php echo $u->title_adv; ?>" style="width: 100px; height: auto;"></td>
+                        <td><?php echo $u->id_dc ?></td>
+                        <td><?php echo $u->title_dc ?></td>
+                        <td><img src="<?php echo base_url('assets/images/' . $u->poster_dc); ?>" alt="<?php echo $u->title_dc; ?>" style="width: 100px; height: auto;"></td>
                         <td>
-                          <a href="<?php echo site_url('crud/edit/'.$u->id_adv); ?>" class="btn btn-warning a-btn-slide-text">
+                          <a href="<?php echo site_url('crud/edit/'.$u->id_dc); ?>" class="btn btn-warning a-btn-slide-text">
                             <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> 
                             <span><strong>Edit</strong></span>
                           </a>
-                          <a href="<?php echo site_url('crud/hapus/'.$u->id_adv); ?>" class="btn btn-danger a-btn-slide-text">
-                            <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> 
-                            <span><strong>Hapus</strong></span>
+                          <a href="<?php echo site_url('c_admin2/data_digiceleb?hapus_dc='.$u->id_dc); ?>" class="btn btn-danger a-btn-slide-text">
+                          <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> 
+                          <span><strong>Hapus</strong></span>
                           </a>
                         </td>
                       </tr>
-                    <?php } ?>
+                      <?php 
+                      }
+                      } else {
+                      echo "<tr><td colspan='5'>No data available</td></tr>";
+                      }
+                      ?>
                   </tbody>
                 </table>
               </div>
@@ -165,3 +170,4 @@
         </section>
         <!-- /.content -->
       </div>
+      <?php  $this->load->view('templates/footer_admin');?>
