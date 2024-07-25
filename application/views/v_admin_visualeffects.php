@@ -129,27 +129,33 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <?php 
-                    $no = 1;
-                    foreach($datamu as $u){ 
-                      ?>
+                  <?php 
+                  if(!empty($datamu)) {
+                  $no = 1;
+                  foreach($datamu as $u){ 
+                  ?>
                       <tr>
                         <td><?php echo $no++ ?></td>
                         <td><?php echo $u->id_ve ?></td>
                         <td><?php echo $u->title_ve ?></td>
-                        <td><img src="<?php echo base_url('assets/' . $u->poster_ve); ?>" alt="<?php echo $u->title_ve; ?>" style="width: 100px; height: auto;"></td>
+                        <td><img src="<?php echo base_url('assets/images/' . $u->poster_ve); ?>" alt="<?php echo $u->title_ve; ?>" style="width: 100px; height: auto;"></td>
                         <td>
                           <a href="<?php echo site_url('crud/edit/'.$u->id_ve); ?>" class="btn btn-warning a-btn-slide-text">
                             <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> 
                             <span><strong>Edit</strong></span>
                           </a>
-                          <a href="<?php echo site_url('crud/hapus/'.$u->id_ve); ?>" class="btn btn-danger a-btn-slide-text">
-                            <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> 
-                            <span><strong>Hapus</strong></span>
+                          <a href="<?php echo site_url('c_admin2/data_visualeffects?hapus_ve='.$u->id_ve); ?>" class="btn btn-danger a-btn-slide-text">
+                          <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> 
+                          <span><strong>Hapus</strong></span>
                           </a>
                         </td>
                       </tr>
-                    <?php } ?>
+                      <?php 
+                      }
+                      } else {
+                      echo "<tr><td colspan='5'>No data available</td></tr>";
+                      }
+                      ?>
                   </tbody>
                 </table>
               </div>
