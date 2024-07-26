@@ -5,7 +5,7 @@ class C_admin2 extends CI_Controller {
     function __construct() {
         parent::__construct();
 
-        if($this->session->userdata('status') != "login"){
+        if ($this->session->userdata('status') != "login") {
             redirect(base_url("login"));
         }
 
@@ -21,13 +21,11 @@ class C_admin2 extends CI_Controller {
 
         if ($id_adv) {
             $this->Crud_model->delete_ad($id_adv);
-
             $this->session->set_flashdata('message', 'Data berhasil dihapus');
-
             redirect('c_admin2/data_advertising');
         }
 
-        $data['datamu'] = $this->Crud_model->get_all_ads();
+        $data['datamu'] = $this->Crud_model->get_all_adv();
         $this->load->view('v_admin_advertising', $data);
     }
 
@@ -36,9 +34,7 @@ class C_admin2 extends CI_Controller {
 
         if ($id_as) {
             $this->Crud_model->delete_as($id_as);
-
             $this->session->set_flashdata('message', 'Data berhasil dihapus');
-
             redirect('c_admin2/data_animatedshorts');
         }
 
@@ -51,9 +47,7 @@ class C_admin2 extends CI_Controller {
 
         if ($id_ve) {
             $this->Crud_model->delete_ve($id_ve);
-
             $this->session->set_flashdata('message', 'Data berhasil dihapus');
-
             redirect('c_admin2/data_visualeffects');
         }
 
@@ -66,9 +60,7 @@ class C_admin2 extends CI_Controller {
 
         if ($id_dc) {
             $this->Crud_model->delete_dc($id_dc);
-
             $this->session->set_flashdata('message', 'Data berhasil dihapus');
-
             redirect('c_admin2/data_digiceleb');
         }
 
@@ -76,3 +68,4 @@ class C_admin2 extends CI_Controller {
         $this->load->view('v_admin_digiceleb', $data);
     }
 }
+?>
