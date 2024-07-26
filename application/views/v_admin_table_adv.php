@@ -113,9 +113,9 @@
       <section class="content">
     <div class="row">
         <div class="col-md-12">
-            <div class="card card-primary">
+            <div class="card card-info">
                 <div class="card-header">
-                    <h3 class="card-title">Quick Example</h3>
+                    <h3 class="card-title">Please fill out this form:</h3>
                 </div>
                 <?php 
                 if(isset($error))
@@ -128,72 +128,72 @@
                 <form method="post" enctype="multipart/form-data" action="<?php echo base_url(); ?>c_upload/proses">
                     <div class="card-body">
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Judul</label>
-                            <input type="text" class="form-control" id="exampleInputEmail1" name ="title_adv" placeholder="Masukkan Judul">
+                            <label for="exampleInputEmail1">Project Title (use all capital letters)</label>
+                            <input type="text" class="form-control" id="exampleInputEmail1" name ="title_adv" placeholder="Enter title" required>
                         </div>
                         <div class="form-group">
                             <label for="exampleInputFile">Poster</label>
                             <div class="input-group">
                                 <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="poster_adv" name="poster_adv">
+                                    <input type="file" class="custom-file-input" id="poster_adv" name="poster_adv" required>
                                     <label class="custom-file-label" for="poster_adv">Choose file</label>
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputFile">Background</label>
+                            <label for="exampleInputFile">Background image</label>
                             <div class="input-group">
                                 <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="bg_adv" name="bg_adv">
+                                    <input type="file" class="custom-file-input" id="bg_adv" name="bg_adv" required>
                                     <label class="custom-file-label" for="bg_adv">Choose file</label>
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Description</label>
-                            <input type="text" class="form-control" id="exampleInputEmail1" name ="description_adv" placeholder="Masukkan Deskripsi">
+                            <label for="exampleInputEmail1">Project description</label>
+                            <input type="text" class="form-control" id="exampleInputEmail1" name ="description_adv" placeholder="Enter description" required>
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputFile">Image 1</label>
+                            <label for="exampleInputFile">Add image 1</label>
                             <div class="input-group">
                                 <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="image_adv1" name="image_adv1">
+                                    <input type="file" class="custom-file-input" id="image_adv1" name="image_adv1" required>
                                     <label class="custom-file-label" for="image_adv1">Choose file</label>
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputFile">Image 2</label>
+                            <label for="exampleInputFile">Add image 2</label>
                             <div class="input-group">
                                 <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="image_adv2" name="image_adv2">
+                                    <input type="file" class="custom-file-input" id="image_adv2" name="image_adv2" required>
                                     <label class="custom-file-label" for="image_adv2">Choose file</label>
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputFile">Image 3</label>
+                            <label for="exampleInputFile">Add image 3</label>
                             <div class="input-group">
                                 <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="image_adv3" name="image_adv3">
+                                    <input type="file" class="custom-file-input" id="image_adv3" name="image_adv3" required>
                                     <label class="custom-file-label" for="image_adv3">Choose file</label>
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputFile">Image 4</label>
+                            <label for="exampleInputFile">Add image 4</label>
                             <div class="input-group">
                                 <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="image_adv4" name="image_adv4">
+                                    <input type="file" class="custom-file-input" id="image_adv4" name="image_adv4" required>
                                     <label class="custom-file-label" for="image_adv4">Choose file</label>
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputFile">Video</label>
+                            <label for="exampleInputFile">Add video (make sure format is .mp4)</label>
                             <div class="input-group">
                                 <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="video_adv" name="video_adv">
+                                    <input type="file" class="custom-file-input" id="video_adv" name="video_adv" required>
                                     <label class="custom-file-label" for="video_adv">Choose file</label>
                                 </div>
                             </div>
@@ -207,7 +207,8 @@
         </div>
     </div>
 </section>
-    
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
    <!-- jQuery and Bootstrap JS script -->
    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
