@@ -2,7 +2,7 @@
 <?php 
 foreach($advertising as $u){ 
   ?>
-  <section data-bs-version="5.1" class="info1 cid-ui5KXAvjPq" id="info1-1z" style="background-image: url('<?php echo base_url('assets/'.$u->bg_adv); ?>');">
+  <section data-bs-version="5.1" class="info1 cid-ui5KXAvjPq" id="info1-1z" style="background-image: url('<?php echo base_url('assets/images/'.$u->bg_adv); ?>');">
   <div class="align-center container-fluid">
     <div class="row justify-content-center">
       <div class="col-12 col-lg-8">
@@ -26,7 +26,7 @@ foreach($advertising as $u){
         <div class="item features-image col-12 col-md-6 col-lg-3">
           <div class="item-wrapper">
             <div class="item-img">
-              <img src="<?php echo base_url('assets/'.$u->image_adv1); ?>" title="" data-slide-to="0" data-bs-slide-to="0">
+              <img src="<?php echo base_url('assets/images/'.$u->image_adv1); ?>" title="" data-slide-to="0" data-bs-slide-to="0">
             </div>
             
           </div>
@@ -34,7 +34,7 @@ foreach($advertising as $u){
         <div class="item features-image col-12 col-md-6 col-lg-3">
           <div class="item-wrapper">
             <div class="item-img">
-              <img src="<?php echo base_url('assets/'.$u->image_adv2); ?>" title="" data-slide-to="1" data-bs-slide-to="1">
+              <img src="<?php echo base_url('assets/images/'.$u->image_adv2); ?>" title="" data-slide-to="1" data-bs-slide-to="1">
             </div>
             
           </div>
@@ -42,7 +42,7 @@ foreach($advertising as $u){
         <div class="item features-image col-12 col-md-6 col-lg-3">
           <div class="item-wrapper">
             <div class="item-img">
-              <img src="<?php echo base_url('assets/'.$u->image_adv3); ?>" title="" data-slide-to="2" data-bs-slide-to="2">
+              <img src="<?php echo base_url('assets/images/'.$u->image_adv3); ?>" title="" data-slide-to="2" data-bs-slide-to="2">
             </div>
             
           </div>
@@ -50,7 +50,7 @@ foreach($advertising as $u){
         <div class="item features-image col-12 col-md-6 col-lg-3">
           <div class="item-wrapper">
             <div class="item-img">
-              <img src="<?php echo base_url('assets/'.$u->image_adv4); ?>" title="" data-slide-to="3" data-bs-slide-to="3">
+              <img src="<?php echo base_url('assets/images/'.$u->image_adv4); ?>" title="" data-slide-to="3" data-bs-slide-to="3">
             </div>
             
           </div>
@@ -65,7 +65,7 @@ foreach($advertising as $u){
         <div class="col-12 col-lg-6">
           <div class="image-wrapper">
             <video class="custom-video-size" controls autoplay muted>
-              <source src="<?php echo base_url('assets/'.$u->video_adv); ?>" type="video/mp4">
+              <source src="<?php echo base_url('assets/images/'.$u->video_adv); ?>" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
             </div>
