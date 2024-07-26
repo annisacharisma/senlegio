@@ -136,7 +136,7 @@
                                             <td><?php echo $u->title_adv ?></td>
                                             <td><img src="<?php echo base_url('assets/images/' . $u->poster_adv); ?>" alt="<?php echo $u->title_adv; ?>" style="width: 100px; height: auto;"></td>
                                             <td>
-                                                <a href="<?php echo site_url('crud/edit/'.$u->id_adv); ?>" class="btn btn-warning a-btn-slide-text">
+                                            	<a href="<?php echo site_url('c_crud/edit_advertising/'.$u->id_adv); ?>" class="btn btn-warning a-btn-slide-text">
                                                     <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> 
                                                     <span><strong>Edit</strong></span>
                                                 </a>
