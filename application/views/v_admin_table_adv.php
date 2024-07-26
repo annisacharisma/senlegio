@@ -111,15 +111,111 @@
 
       <!-- Main content -->
       <section class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card card-primary">
+                <div class="card-header">
+                    <h3 class="card-title">Quick Example</h3>
+                </div>
+                <?php 
+                if(isset($error))
+                {
+                    echo "ERROR UPLOAD : <br/>";
+                    print_r($error);
+                    echo "<hr/>";
+                }
+                ?>
+                <form method="post" enctype="multipart/form-data" action="<?php echo base_url(); ?>c_upload/proses">
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Judul</label>
+                            <input type="text" class="form-control" id="exampleInputEmail1" name ="title_adv" placeholder="Masukkan Judul">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputFile">Poster</label>
+                            <div class="input-group">
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="poster_adv" name="poster_adv">
+                                    <label class="custom-file-label" for="poster_adv">Choose file</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputFile">Background</label>
+                            <div class="input-group">
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="bg_adv" name="bg_adv">
+                                    <label class="custom-file-label" for="bg_adv">Choose file</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Description</label>
+                            <input type="text" class="form-control" id="exampleInputEmail1" name ="description_adv" placeholder="Masukkan Deskripsi">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputFile">Image 1</label>
+                            <div class="input-group">
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="image_adv1" name="image_adv1">
+                                    <label class="custom-file-label" for="image_adv1">Choose file</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputFile">Image 2</label>
+                            <div class="input-group">
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="image_adv2" name="image_adv2">
+                                    <label class="custom-file-label" for="image_adv2">Choose file</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputFile">Image 3</label>
+                            <div class="input-group">
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="image_adv3" name="image_adv3">
+                                    <label class="custom-file-label" for="image_adv3">Choose file</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputFile">Image 4</label>
+                            <div class="input-group">
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="image_adv4" name="image_adv4">
+                                    <label class="custom-file-label" for="image_adv4">Choose file</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputFile">Video</label>
+                            <div class="input-group">
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="video_adv" name="video_adv">
+                                    <label class="custom-file-label" for="video_adv">Choose file</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+      <!-- <section class="content">
         <div class="row">
           <div class="col-md-12">
-            <!-- general form elements -->
+            
             <div class="card card-primary">
               <div class="card-header">
                 <h3 class="card-title">Quick Example</h3>
               </div>
-              <!-- /.card-header -->
-              <!-- form start -->
+              
               <?php 
               if(isset($error))
               {
@@ -203,19 +299,19 @@
                     </div>
                   </div>
                 </div>
-                <!-- /.card-body -->
+               
 
                 <div class="card-footer">
                   <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
               </form>
             </div>
-            <!-- /.card -->
+          
           </div>
         </section>
       </div>
     </section>
-  </div>
+  </div> -->
 
    <!-- jQuery and Bootstrap JS script -->
    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
