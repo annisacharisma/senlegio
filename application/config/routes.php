@@ -52,4 +52,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
-$route['crud/hapus/(:num)'] = 'crud/hapus/$1';
+$route['crud/hapus_ad/(:num)'] = 'crud/hapus_ad/$1';
+$route['crud/hapus_as/(:num)'] = 'crud/hapus_as/$1';
+$route['crud/hapus_ve/(:num)'] = 'crud/hapus_ve/$1';
+$route['crud/hapus_dc/(:num)'] = 'crud/hapus_dc/$1';
+
+$route['c_admin2/data_advertising'] = 'c_admin2/data_advertising';
+$route['c_admin2/data_animatedshorts'] = 'c_admin2/data_animatedshorts';
+$route['c_admin2/data_visualeffects'] = 'c_admin2/data_visualeffects';
+$route['c_admin2/data_digiceleb'] = 'c_admin2/data_digiceleb';
