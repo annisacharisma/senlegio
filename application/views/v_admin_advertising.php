@@ -125,10 +125,11 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php 
-                                    $no = 1;
-                                    foreach($poster_adv->result() as $u){ 
-                                        ?>
+                               <?php 
+                                    if(!empty($datamu)) {
+                                        $no = 1;
+                                        foreach($datamu as $u){ 
+                                    ?>
                                         <tr>
                                             <td><?php echo $no++ ?></td>
                                             <td><?php echo $u->id_adv ?></td>
@@ -139,15 +140,18 @@
                                                     <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> 
                                                     <span><strong>Edit</strong></span>
                                                 </a>
-                                                <a href="<?php echo site_url('#'.$u->id_adv); ?>" class="btn btn-danger a-btn-slide-text">
-                                                    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> 
-                                                    <span><strong>Hapus</strong></span>
-                                                </a>
+                                                <a href="<?php echo site_url('c_admin2/data_advertising?hapus_ad='.$u->id_adv); ?>" class="btn btn-danger a-btn-slide-text">
+                                                <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> 
+                                                <span><strong>Hapus</strong></span>
+                                            	</a>
                                             </td>
                                         </tr>
                                         <?php 
+                                        }
+                                    } else {
+                                        echo "<tr><td colspan='5'>No data available</td></tr>";
                                     }
-                                ?>
+                                    ?>
                             </tbody>
                         </table>
                     </div>
