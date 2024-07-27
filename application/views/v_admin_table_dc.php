@@ -193,6 +193,10 @@
         </div>
     </div>
 </section>
+		</div><!-- /.container-fluid -->
+        </section>
+        <!-- /.content -->
+      </div>
 <script>
 document.addEventListener('DOMContentLoaded', function () {
     var inputs = document.querySelectorAll('.custom-file-input');
