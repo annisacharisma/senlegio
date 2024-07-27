@@ -151,10 +151,10 @@
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1">Project description</label>
-                            <input type="text" class="form-control" id="exampleInputEmail1" name ="description_adv" placeholder="Enter description" required>
+                            <textarea class="form-control" rows="4" id="exampleInputEmail1" rows="4" name ="description_adv" placeholder="Enter description" required></textarea>
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputFile">Add image 1</label>
+                            <label for="exampleInputFile">Choose image 1</label>
                             <div class="input-group">
                                 <div class="custom-file">
                                     <input type="file" class="custom-file-input" id="image_adv1" name="image_adv1" required>
@@ -163,7 +163,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputFile">Add image 2</label>
+                            <label for="exampleInputFile">Choose image 2</label>
                             <div class="input-group">
                                 <div class="custom-file">
                                     <input type="file" class="custom-file-input" id="image_adv2" name="image_adv2" required>
@@ -172,7 +172,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputFile">Add image 3</label>
+                            <label for="exampleInputFile">Choose image 3</label>
                             <div class="input-group">
                                 <div class="custom-file">
                                     <input type="file" class="custom-file-input" id="image_adv3" name="image_adv3" required>
@@ -181,7 +181,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputFile">Add image 4</label>
+                            <label for="exampleInputFile">Choose image 4</label>
                             <div class="input-group">
                                 <div class="custom-file">
                                     <input type="file" class="custom-file-input" id="image_adv4" name="image_adv4" required>
@@ -190,7 +190,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputFile">Add video (make sure format is .mp4)</label>
+                            <label for="exampleInputFile">Choose video (make sure format is .mp4)</label>
                             <div class="input-group">
                                 <div class="custom-file">
                                     <input type="file" class="custom-file-input" id="video_adv" name="video_adv" required>
@@ -207,6 +207,10 @@
         </div>
     </div>
 </section>
+</div><!-- /.container-fluid -->
+        </section>
+        <!-- /.content -->
+      </div>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
    <!-- jQuery and Bootstrap JS script -->
