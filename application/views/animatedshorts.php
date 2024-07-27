@@ -44,7 +44,7 @@
                   ?>
                   <div class="col-12 col-lg-3 d-flex flex-column justify-content-center align-items-center">
                     <div class="image-wrapper">
-                        <a href="<?php echo site_url('c_senlegio/show_as_project/'.$u->id_as); ?>"><img src="<?php echo base_url('assets/'.$u->poster_as); ?>" alt="Image" style="height: 19rem; width: 15rem; object-fit: cover;"></a>
+                        <a href="<?php echo site_url('c_senlegio/show_as_project/'.$u->id_as); ?>"><img src="<?php echo base_url('assets/images/'.$u->poster_as); ?>" alt="Image" style="height: 19rem; width: 15rem; object-fit: cover;"></a>
                         <p class="mbr-text mbr-fonts-style mt-2 align-center display-7">
                             <strong><?php echo $u->title_as ?></strong></p>
                         </div>
