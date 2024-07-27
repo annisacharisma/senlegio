@@ -1,7 +1,7 @@
 <?php $this->load->view('templates/Header'); ?>
 
 <?php foreach($animated_shorts as $u) { ?>
-    <section data-bs-version="5.1" class="info1 cid-ui5PTRMjSO" id="info1-2c" style="background-image: url('<?php echo base_url('assets/' . $u->bg_as); ?>');">
+    <section data-bs-version="5.1" class="info1 cid-ui5PTRMjSO" id="info1-2c" style="background-image: url('<?php echo base_url('assets/images/' . $u->bg_as); ?>');">
         <div class="align-center container-fluid">
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-8">
@@ -39,8 +39,7 @@
                         $u->image_as6,
                         $u->image_as7,
                         $u->image_as8,
-                        $u->image_as9,
-                        $u->image_as10,
+                    
                     ];
                     $active_set = false;
 
@@ -54,7 +53,7 @@
                             if (!empty($images[$i])) {
                                 echo "<div class='col-lg-6 d-flex justify-content-center'>
                                         <div class='image-wrapper'>
-                                            <img src='" . base_url('assets/' . $images[$i]) . "' alt='Loading Image' style='max-width: 80%; height: auto; margin-right:20%;'>
+                                            <img src='" . base_url('assets/images/' . $images[$i]) . "' alt='Loading Image' style='max-width: 80%; height: auto; margin-right:20%;'>
                                         </div>
                                     </div>";
                             }
@@ -62,7 +61,7 @@
                             if (!empty($images[$i + 1])) {
                                 echo "<div class='col-lg-6 d-flex justify-content-center'>
                                         <div class='image-wrapper'>
-                                            <img src='" . base_url('assets/' . $images[$i + 1]) . "' alt='Loading Image' style='max-width: 80%; height: auto; margin-left:20%;'>
+                                            <img src='" . base_url('assets/images/' . $images[$i + 1]) . "' alt='Loading Image' style='max-width: 80%; height: auto; margin-left:20%;'>
                                         </div>
                                     </div>";
                             }
@@ -89,10 +88,10 @@
             <div class="row justify-content-center mt-4">
                 <div class="col-12 col-md-9 video-block d-flex flex-column justify-content-center align-items-center">
                     <div class="video-wrapper">
-                        <video class="custom-video-size" controls autoplay muted>
-                            <source src="<?php echo base_url('assets/'.$u->video_as); ?>" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+                    <video class="custom-video-size" controls autoplay muted>
+              <source src="<?php echo base_url('assets/images/'.$u->video_as); ?>" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
                     </div>
                 </div>
             </div>
