@@ -55,7 +55,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="<?php echo base_url("c_data/data_advertising");?>" class="nav-link">
+                <a href="<?php echo base_url("c_upload/index");?>" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Data Advertising</p>
                 </a>
@@ -114,48 +114,49 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Fixed Header Table</h3>
+              <a href="<?php echo base_url("c_data/table_animatedshorts");?>" class="btn btn-primary a-btn-slide-text">
+                            <strong>Add new project</strong>
+                        </a>
               </div>
               <!-- /.card-header -->
               <div class="card-body table-responsive p-0" style="height: auto;">
                 <table class="table table-head-fixed text-nowrap">
                   <thead>
                     <tr>
-                      <th>Nomer</th>
+                    <th>No.</th>
                       <th>ID</th>
-                      <th>Judul</th>
+                      <th>Title</th>
                       <th>Poster</th>
                       <th>Action</th>
                     </tr>
                   </thead>
                   <tbody>
                   <?php 
-                    if(!empty($datamu)) {
-                    $no = 1;
-                    foreach($datamu as $u){ 
-                    ?>
-                      <tr>
-                        <td><?php echo $no++ ?></td>
-                        <td><?php echo $u->id_as ?></td>
-                        <td><?php echo $u->title_as ?></td>
-                        <td><img src="<?php echo base_url('assets/images/' . $u->poster_as); ?>" alt="<?php echo $u->title_as; ?>" style="width: 100px; height: auto;"></td>
-                        <td>
-                          <a href="<?php echo site_url('crud/edit/'.$u->id_as); ?>" class="btn btn-warning a-btn-slide-text">
+                $no = 1; // Initialize row number
+                foreach ($datamu as $u) { 
+            ?>
+                <tr>
+                    <td><?php echo $no++; ?></td>
+                    <td><?php echo $u->id_as; ?></td>
+                    <td><?php echo $u->title_as; ?></td>
+                    <td>
+                        <img src="<?php echo base_url('assets/images/' . $u->poster_as); ?>" 
+                             alt="<?php echo $u->title_as; ?>" 
+                             style="width: 100px; height: auto;"> </td>
+                             <td>
+                          <a href="<?php echo site_url('#'); ?>" class="btn btn-warning a-btn-slide-text">
                             <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> 
                             <span><strong>Edit</strong></span>
                           </a>
-                          <a href="<?php echo site_url('c_admin2/data_animatedshorts?hapus_as='.$u->id_as); ?>" class="btn btn-danger a-btn-slide-text">
+                          <a href="<?php echo site_url('#'); ?>" class="btn btn-danger a-btn-slide-text">
                           <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> 
-                          <span><strong>Hapus</strong></span>
+                          <span><strong>Delete</strong></span>
                           </a>
                         </td>
-                      </tr>
-                      <?php 
-                                        }
-                                    } else {
-                                        echo "<tr><td colspan='5'>No data available</td></tr>";
+                                        </tr>
+                                        <?php 
                                     }
-                                    ?>
+                                ?>
                   </tbody>
                 </table>
               </div>
