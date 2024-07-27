@@ -1,7 +1,7 @@
 <?php 
 
 class C_upload extends CI_Controller {
-
+// kode proses input adv
     public function proses()
     {
         $this->load->library('upload');
@@ -72,6 +72,7 @@ class C_upload extends CI_Controller {
         $this->load->view('v_admin_advertising', $data);
     }
 
+    // kode proses input dc
     public function proses_dc()
     {
         $this->load->library('upload');
@@ -125,5 +126,86 @@ class C_upload extends CI_Controller {
         $data['poster_dc'] = $this->db->get('digiceleb')->result();
         $this->load->view('v_admin_digiceleb', $data);
     }
+    
+    // kode proses input as
+    public function proses_as()
+    {
+        $this->load->library('upload');
+
+        // Configure upload for each file
+        $config['upload_path'] = './assets/images/';
+        $config['allowed_types'] = 'jpg|png|mp4';
+        $config['encrypt_name'] = TRUE;
+
+        $this->upload->initialize($config);
+
+        $data = [];
+        $data['title_as'] = $this->input->post('title_as');
+        $data['description_as'] = $this->input->post('description_as');
+        
+        // Upload and save poster_as
+        if ($this->upload->do_upload('poster_as')) {
+            $upload_data = $this->upload->data();
+            $data['poster_as'] = $upload_data['file_name'];
+        }
+
+        // Upload and save bg_as
+        if ($this->upload->do_upload('bg_as')) {
+            $upload_data = $this->upload->data();
+            $data['bg_as'] = $upload_data['file_name'];
+        }
+
+        // Upload and save image_as1
+        if ($this->upload->do_upload('image_as1')) {
+            $upload_data = $this->upload->data();
+            $data['image_as1'] = $upload_data['file_name'];
+        }
+
+        // Upload and save image_as2
+        if ($this->upload->do_upload('image_as2')) {
+            $upload_data = $this->upload->data();
+            $data['image_as2'] = $upload_data['file_name'];
+        }
+
+        if ($this->upload->do_upload('image_as3')) {
+            $upload_data = $this->upload->data();
+            $data['image_as3'] = $upload_data['file_name'];
+        }
+        if ($this->upload->do_upload('image_as4')) {
+            $upload_data = $this->upload->data();
+            $data['image_as4'] = $upload_data['file_name'];
+        }
+        if ($this->upload->do_upload('image_as5')) {
+            $upload_data = $this->upload->data();
+            $data['image_as5'] = $upload_data['file_name'];
+        }
+        if ($this->upload->do_upload('image_as6')) {
+            $upload_data = $this->upload->data();
+            $data['image_as6'] = $upload_data['file_name'];
+        }
+        if ($this->upload->do_upload('image_as7')) {
+            $upload_data = $this->upload->data();
+            $data['image_as7'] = $upload_data['file_name'];
+        }
+        if ($this->upload->do_upload('image_as8')) {
+            $upload_data = $this->upload->data();
+            $data['image_as8'] = $upload_data['file_name'];
+        }
+        if ($this->upload->do_upload('video_as')) {
+            $upload_data = $this->upload->data();
+            $data['video_as'] = $upload_data['file_name'];
+        }
+        // Insert data into the database
+        $this->db->insert('animated_shorts', $data);
+        // Redirect to the main page
+        redirect('c_data/data_animatedshorts');
+    }
+    public function load_as()
+    {
+        $data['poster_as'] = $this->db->get('animated_shorts')->result();
+        $this->load->view('v_admin_animatedshorts', $data);
+    }
+
 }
 
+   
