@@ -2,7 +2,7 @@
 <?php 
 foreach($visualeffect as $u){ 
   ?>
-<section data-bs-version="5.1" class="info1 cid-ui5QtcUUBP" id="info1-2i" style="background-image: url('<?php echo base_url('assets/'.$u->bg_ve); ?>');">
+<section data-bs-version="5.1" class="info1 cid-ui5QtcUUBP" id="info1-2i" style="background-image: url('<?php echo base_url('assets/images/'.$u->bg_ve); ?>');">
     
 
     
@@ -60,7 +60,7 @@ foreach($visualeffect as $u){
                             if (!empty($images[$i])) {
                                 echo "<div class='col-lg-6'>
                                         <div class='image-wrapper'>
-                                            <img src='" . base_url('assets/' .$images[$i]) . "' alt='Loading Image' style='max-width: 80%; height: auto; margin-right:20%;'>
+                                            <img src='" . base_url('assets/images/' .$images[$i]) . "' alt='Loading Image' style='max-width: 80%; height: auto; margin-right:20%;'>
                                         </div>
                                     </div>";
                             }
@@ -68,7 +68,7 @@ foreach($visualeffect as $u){
                             if (!empty($images[$i + 1])) {
                                 echo "<div class='col-lg-6'>
                                         <div class='image-wrapper'>
-                                            <img src='" . base_url('assets/' .$images[$i + 1]) . "' alt='Loading Image' style='max-width: 80%; height: auto; margin-left:20%;'>
+                                            <img src='" . base_url('assets/images/' .$images[$i + 1]) . "' alt='Loading Image' style='max-width: 80%; height: auto; margin-left:20%;'>
                                         </div>
                                     </div>";
                             }
@@ -114,7 +114,7 @@ foreach($visualeffect as $u){
                                 <div class='col-12 col-md-9 mx-auto video-block d-flex flex-column justify-content-center align-items-center'>
                                     <div class='video-wrapper'>
                                         <video class='video-play w-100' controls autoplay muted>
-                                            <source src='" . base_url('assets/' . $video) . "' type='video/mp4'>
+                                            <source src='" . base_url('assets/images/' . $video) . "' type='video/mp4'>
                                             Your browser does not support the video tag.
                                         </video>
                                     </div>
