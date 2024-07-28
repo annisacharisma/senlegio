@@ -38,7 +38,7 @@
           <!-- Add icons to the links using the .nav-icon class
            with font-awesome or any other icon font library -->
            <li class="nav-item menu-open">
-            <a href="<?php echo base_url("c_admin2/index");?>" class="nav-link">
+            <a href="<?php echo base_url("c_admin2/");?>" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
@@ -96,7 +96,7 @@
         <div class="container-fluid">
           <div class="row mb-2">
             <div class="col-sm-6">
-              <h1 class="m-0">Advertising</h1>
+              <h1 class="m-0">Edit Advertising</h1>
             </div><!-- /.col -->
             <div class="col-sm-6">
               <ol class="breadcrumb float-sm-right">
@@ -114,9 +114,9 @@
         <div class="row">
           <div class="col-md-12">
             <!-- general form elements -->
-            <div class="card card-primary">
+            <div class="card card-info">
               <div class="card-header">
-                <h3 class="card-title">Edit Advertising</h3>
+                <h3 class="card-title">Please fill out this form:</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -124,79 +124,79 @@
                 <input type="hidden" name="id_adv" value="<?php echo $advertising->id_adv; ?>">
                 <div class="card-body">
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Judul</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" name ="title_adv" value="<?php echo $advertising->title_adv; ?>" placeholder="Masukkan Judul">
+                    <label for="exampleInputEmail1">Project Title (use all capital letters)</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name ="title_adv" value="<?php echo $advertising->title_adv; ?>" placeholder="Enter title" required>
                   </div>
                   <div class="form-group">
                     <label for="exampleInputFile">Poster</label>
                     <div class="input-group">
                       <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="exampleInputFile" name="poster_adv">
-                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                        <input type="file" class="custom-file-input" id="poster_adv" name="poster_adv">
+                        <label class="custom-file-label" for="poster_adv">Choose file</label>
                       </div>
                     </div>
                     <img src="<?php echo base_url('assets/images/' . $advertising->poster_adv); ?>" alt="<?php echo $advertising->title_adv; ?>" style="width: 100px; height: auto;">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputFile">Background</label>
+                    <label for="exampleInputFile">Background image</label>
                     <div class="input-group">
                       <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="exampleInputFile" name="bg_adv">
-                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                        <input type="file" class="custom-file-input" id="bg_adv" name="bg_adv">
+                        <label class="custom-file-label" for="bg_adv">Choose file</label>
                       </div>
                     </div>
                     <img src="<?php echo base_url('assets/images/' . $advertising->bg_adv); ?>" alt="Background Title" style="width: 100px; height: auto;">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Description</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" name ="description_adv" value="<?php echo $advertising->description_adv; ?>" placeholder="Masukkan Deskripsi">
+                    <label for="exampleInputEmail1">Project description</label>
+                    <textarea class="form-control" rows="4" id="exampleInputEmail1" rows="4" name ="description_adv" placeholder="Enter description" required><?php echo $advertising->description_adv; ?></textarea>
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputFile">Image 1</label>
+                    <label for="exampleInputFile">Choose image 1</label>
                     <div class="input-group">
                       <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="exampleInputFile" name="image_adv1">
-                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                        <input type="file" class="custom-file-input" id="image_adv1" name="image_adv1">
+                        <label class="custom-file-label" for="image_adv1">Choose file</label>
                       </div>
                     </div>
                     <img src="<?php echo base_url('assets/images/' . $advertising->image_adv1); ?>" alt="Image 1" style="width: 100px; height: auto;">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputFile">Image 2</label>
+                    <label for="exampleInputFile">Choose image 2</label>
                     <div class="input-group">
                       <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="exampleInputFile" name="image_adv2">
-                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                        <input type="file" class="custom-file-input" id="image_adv2" name="image_adv2" >
+                        <label class="custom-file-label" for="image_adv2">Choose file</label>
                       </div>
                     </div>
                     <img src="<?php echo base_url('assets/images/' . $advertising->image_adv2); ?>" alt="Image 2" style="width: 100px; height: auto;">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputFile">Image 3</label>
+                    <label for="exampleInputFile">Choose image 3</label>
                     <div class="input-group">
                       <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="exampleInputFile" name="image_adv3">
-                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                        <input type="file" class="custom-file-input" id="image_adv3" name="image_adv3">
+                        <label class="custom-file-label" for="image_adv3">Choose file</label>
                       </div>
                     </div>
                     <img src="<?php echo base_url('assets/images/' . $advertising->image_adv3); ?>" alt="Image 3" style="width: 100px; height: auto;">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputFile">Image 4</label>
+                    <label for="exampleInputFile">Choose image 4</label>
                     <div class="input-group">
                       <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="exampleInputFile" name="image_adv4">
-                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                        <input type="file" class="custom-file-input" id="image_adv4" name="image_adv4">
+                        <label class="custom-file-label" for="image_adv4">Choose file</label>
                       </div>
                     </div>
                     <img src="<?php echo base_url('assets/images/' . $advertising->image_adv4); ?>" alt="Image 4" style="width: 100px; height: auto;">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputFile">Video</label>
+                    <label for="exampleInputFile">Choose video (make sure format is .mp4)</label>
                     <div class="input-group">
                       <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="exampleInputFile" name="video_adv">
-                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                        <input type="file" class="custom-file-input" id="video_adv" name="video_adv">
+                        <label class="custom-file-label" for="video_adv">Choose file</label>
                       </div>
                     </div>
                     <video src="<?php echo base_url('assets/images/' . $advertising->video_adv); ?>" alt="video" style="width: 100px; height: auto;">
@@ -209,12 +209,15 @@
                 </div>
               </form>
             </div>
-            <!-- /.card -->
           </div>
         </section>
       </div>
     </section>
-  </div>
+    </div><!-- /.container-fluid -->
+        </section>
+        <!-- /.content -->
+      </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
    <!-- jQuery and Bootstrap JS script -->
    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
