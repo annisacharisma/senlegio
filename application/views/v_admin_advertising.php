@@ -128,10 +128,10 @@
                                 </tr>
                             </thead>
                             <tbody>
-                            <?php 
-                                        $no = 1;
-                                        foreach($datamu as $u){ 
-                                    ?>
+                                <?php 
+                                    $no = 1;
+                                    foreach($poster_adv->result() as $u){ 
+                                        ?>
                                         <tr>
                                             <td><?php echo $no++ ?></td>
                                             <td><?php echo $u->id_adv ?></td>
@@ -162,4 +162,3 @@
         <!-- /.content -->
     </div>
 </div>
-
