@@ -236,8 +236,10 @@
                                 </div>
                             </div>
                         </div>
-                  <input type="submit" value="Save Changes" class="btn btn-success float-right">
-                </form>
+                        <div class="card-footer">
+                          <button type="submit" class="btn btn-primary">Submit</button>
+                        </div> 
+                 </form>
               </div>
             </div>
           </div>
