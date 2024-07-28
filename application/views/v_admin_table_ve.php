@@ -38,7 +38,7 @@
           <!-- Add icons to the links using the .nav-icon class
            with font-awesome or any other icon font library -->
            <li class="nav-item menu-open">
-            <a href="<?php echo base_url("c_admin2/index");?>" class="nav-link">
+            <a href="<?php echo base_url("c_admin2/");?>" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
@@ -64,13 +64,13 @@
                   </a>
                 </li>
                 <li class="nav-item">
-                <a href="<?php echo base_url("c_data/table_animatedshorts");?>" class="nav-link active">
+                <a href="<?php echo base_url("c_data/table_animatedshorts");?>" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Animated Shorts</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="#" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Visual Effects</p>
                 </a>
