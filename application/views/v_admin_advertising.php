@@ -32,52 +32,55 @@
             </div>
         </div>
 
-        <!-- Sidebar Menu -->
-        <nav class="mt-2">
-            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                <li class="nav-item menu-open">
-                    <a href="<?php echo base_url("c_admin2/index");?>" class="nav-link">
-                        <i class="nav-icon fas fa-tachometer-alt"></i>
-                        <p>Dashboard</p>
-                    </a>
-                </li>
-                <li class="nav-item menu-open">
-                    <a href="#" class="nav-link active">
-                        <i class="nav-icon fas fa-tachometer-alt"></i>
-                        <p>
-                            Data Page
-                            <i class="fas fa-angle-left right"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link active">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Data Advertising</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="<?php echo base_url("c_data/data_animatedshorts");?>" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Data Animated Shorts</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="<?php echo base_url("c_data/data_visualeffects");?>" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Data Visual Effects</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="<?php echo base_url("c_data/data_digiceleb");?>" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Data Digital Celebrity</p>
-                            </a>
-                        </li>
-                    </ul>  
-                </li>
-            </ul>
-        </nav>
+            <!-- Sidebar Menu -->
+    <nav class="mt-2">
+      <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+        <li class="nav-item menu-open">
+          <a href="<?php echo base_url("c_admin2/");?>" class="nav-link">
+            <i class="nav-icon fas fa-tachometer-alt"></i>
+            <p>
+              Dashboard
+            </p>
+          </a>
+        </li>
+        <li class="nav-item menu-open">
+          <a href="#" class="nav-link active">
+            <i class="nav-icon fas fa-tachometer-alt"></i>
+            <p>
+              Data Page
+              <i class="fas fa-angle-left right"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="#" class="nav-link active">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Data Advertising</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="<?php echo base_url("c_data/data_animatedshorts");?>" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Data Animated Shorts</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="<?php echo base_url("c_data/data_visualeffects");?>" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Data Visual Effects</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="<?php echo base_url("c_data/data_digiceleb");?>" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Data Digital Celebrity</p>
+              </a>
+            </li>
+          </ul>
+        </li>
+          <?php  $this->load->view('templates/table_page');?>
+      </ul>
+    </nav>
     </div>
 </aside>
 
@@ -108,7 +111,7 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <a href="<?php echo base_url("c_data/table_advertising");?>" class="btn btn-primary a-btn-slide-text">
+                        <a href="" class="btn btn-primary a-btn-slide-text">
                             <strong>Tambah Data</strong>
                         </a>
                     </div>
@@ -125,33 +128,29 @@
                                 </tr>
                             </thead>
                             <tbody>
-                               <?php 
-                                    if(!empty($datamu)) {
-                                        $no = 1;
-                                        foreach($datamu as $u){ 
-                                    ?>
+                                <?php 
+                                    $no = 1;
+                                    foreach($poster_adv->result() as $u){ 
+                                        ?>
                                         <tr>
                                             <td><?php echo $no++ ?></td>
                                             <td><?php echo $u->id_adv ?></td>
                                             <td><?php echo $u->title_adv ?></td>
                                             <td><img src="<?php echo base_url('assets/images/' . $u->poster_adv); ?>" alt="<?php echo $u->title_adv; ?>" style="width: 100px; height: auto;"></td>
                                             <td>
-                                            	<a href="<?php echo site_url('c_crud/edit_advertising/'.$u->id_adv); ?>" class="btn btn-warning a-btn-slide-text">
+                                                <a href="<?php echo site_url('c_crud/edit_advertising/'.$u->id_adv); ?>" class="btn btn-warning a-btn-slide-text">
                                                     <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> 
                                                     <span><strong>Edit</strong></span>
                                                 </a>
                                                 <a href="<?php echo site_url('c_admin2/data_advertising?hapus_ad='.$u->id_adv); ?>" class="btn btn-danger a-btn-slide-text">
-                                                <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> 
-                                                <span><strong>Hapus</strong></span>
-                                            	</a>
+                                                    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> 
+                                                    <span><strong>Hapus</strong></span>
+                                                </a>
                                             </td>
                                         </tr>
                                         <?php 
-                                        }
-                                    } else {
-                                        echo "<tr><td colspan='5'>No data available</td></tr>";
                                     }
-                                    ?>
+                                ?>
                             </tbody>
                         </table>
                     </div>
@@ -163,4 +162,3 @@
         <!-- /.content -->
     </div>
 </div>
-
