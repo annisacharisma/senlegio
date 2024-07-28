@@ -206,6 +206,85 @@ class C_upload extends CI_Controller {
         $this->load->view('v_admin_animatedshorts', $data);
     }
 
+// kode proses input ve
+    public function proses_ve()
+{
+    $this->load->library('upload');
+
+    // Configure upload for each file
+    $config['upload_path'] = './assets/images/';
+    $config['allowed_types'] = 'jpg|png|mp4';
+    $config['encrypt_name'] = TRUE;
+
+    $this->upload->initialize($config);
+
+    $data = [];
+    $data['title_ve'] = $this->input->post('title_ve');
+    $data['description_ve'] = $this->input->post('description_ve');
+    
+    // Upload and save poster_ve
+    if ($this->upload->do_upload('poster_ve')) {
+        $upload_data = $this->upload->data();
+        $data['poster_ve'] = $upload_data['file_name'];
+    }
+
+    // Upload and save bg_ve
+    if ($this->upload->do_upload('bg_ve')) {
+        $upload_data = $this->upload->data();
+        $data['bg_ve'] = $upload_data['file_name'];
+    }
+
+    // Upload and save image_ve1
+    if ($this->upload->do_upload('image_ve1')) {
+        $upload_data = $this->upload->data();
+        $data['image_ve1'] = $upload_data['file_name'];
+    }
+
+    // Upload and save image_ve2
+    if ($this->upload->do_upload('image_ve2')) {
+        $upload_data = $this->upload->data();
+        $data['image_ve2'] = $upload_data['file_name'];
+    }
+
+    if ($this->upload->do_upload('image_ve3')) {
+        $upload_data = $this->upload->data();
+        $data['image_ve3'] = $upload_data['file_name'];
+    }
+    if ($this->upload->do_upload('image_ve4')) {
+        $upload_data = $this->upload->data();
+        $data['image_ve4'] = $upload_data['file_name'];
+    }
+    if ($this->upload->do_upload('video_ve1')) {
+        $upload_data = $this->upload->data();
+        $data['video_ve1'] = $upload_data['file_name'];
+    }
+    if ($this->upload->do_upload('video_ve2')) {
+        $upload_data = $this->upload->data();
+        $data['video_ve2'] = $upload_data['file_name'];
+    }
+    if ($this->upload->do_upload('video_ve3')) {
+        $upload_data = $this->upload->data();
+        $data['video_ve3'] = $upload_data['file_name'];
+    }
+    if ($this->upload->do_upload('video_ve4')) {
+        $upload_data = $this->upload->data();
+        $data['video_ve4'] = $upload_data['file_name'];
+    }
+    if ($this->upload->do_upload('video_ve5')) {
+        $upload_data = $this->upload->data();
+        $data['video_ve5'] = $upload_data['file_name'];
+    }
+    // Insert data into the database
+    $this->db->insert('visual_effects', $data);
+    // Redirect to the main page
+    redirect('c_data/data_visualeffects');
+}
+public function load_ve()
+{
+    $data['poster_ve'] = $this->db->get('visual_effects')->result();
+    $this->load->view('v_admin_visualeffects', $data);
+}
+
 }
 
    
