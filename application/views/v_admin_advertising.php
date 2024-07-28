@@ -111,8 +111,8 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <a href="" class="btn btn-primary a-btn-slide-text">
-                            <strong>Tambah Data</strong>
+                        <a href="<?php echo base_url("c_data/table_advertising");?>" class="btn btn-primary a-btn-slide-text">
+                            <strong>Add new project</strong>
                         </a>
                     </div>
                     <!-- /.card-header -->
@@ -128,10 +128,10 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php 
-                                    $no = 1;
-                                    foreach($poster_adv->result() as $u){ 
-                                        ?>
+                            <?php 
+                                        $no = 1;
+                                        foreach($datamu as $u){ 
+                                    ?>
                                         <tr>
                                             <td><?php echo $no++ ?></td>
                                             <td><?php echo $u->id_adv ?></td>
@@ -162,3 +162,4 @@
         <!-- /.content -->
     </div>
 </div>
+
