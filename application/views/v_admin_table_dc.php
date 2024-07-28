@@ -70,13 +70,13 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?php echo base_url("c_data/table_visualeffects");?>" class="nav-link">
+                <a href="#" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Visual Effects</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link active">
+                <a href="<?php echo base_url("c_data/table_digiceleb");?>" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Digital Celebrity</p>
                 </a>
@@ -97,7 +97,7 @@
         <div class="container-fluid">
           <div class="row mb-2">
             <div class="col-sm-6">
-              <h1 class="m-0">Digital Celebrity</h1>
+              <h1 class="m-0">Visual Effects</h1>
             </div><!-- /.col -->
             <div class="col-sm-6">
               <ol class="breadcrumb float-sm-right">
@@ -126,66 +126,117 @@
                     echo "<hr/>";
                 }
                 ?>
-                <form method="post" enctype="multipart/form-data" action="<?php echo base_url(); ?>c_upload/proses_dc">
-                    <div class="card-body">
+                <form method="post" enctype="multipart/form-data" action="<?php echo base_url(); ?>c_upload/proses_ve">
+                  <!-- Kode Baruuuu -->
+                  <div class="card-body">
                         <div class="form-group">
-                            <label for="title_dc">Digiceleb name (use all capital letters)</label>
-                            <input type="text" class="form-control" id="title_dc" name="title_dc" placeholder="Enter title" required>
+                            <label for="title_ve">Project Title (use all capital letters)</label>
+                            <input type="text" class="form-control" id="title_ve" name="title_ve" placeholder="Enter title" required>
                         </div>
                         <div class="form-group">
-                            <label for="poster_dc">Poster</label>
+                            <label for="poster_ve">Poster</label>
                             <div class="input-group">
                                 <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="poster_dc" name="poster_dc" required>
-                                    <label class="custom-file-label" for="poster_dc">Choose file</label>
+                                    <input type="file" class="custom-file-input" id="poster_ve" name="poster_ve" required>
+                                    <label class="custom-file-label" for="poster_ve">Choose file</label>
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="bg_dc">Background</label>
+                            <label for="bg_ve">Background</label>
                             <div class="input-group">
                                 <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="bg_dc" name="bg_dc" required>
-                                    <label class="custom-file-label" for="bg_dc">Choose file</label>
+                                    <input type="file" class="custom-file-input" id="bg_ve" name="bg_ve" required>
+                                    <label class="custom-file-label" for="bg_ve">Choose file</label>
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="description">Headline Project</label>
-                            <textarea id="description_line1" class="form-control" rows="4" name="description_line1" placeholder="Enter description" required></textarea>
+                            <label for="description_ve">Project description</label>
+                            <textarea id="description_ve" class="form-control" rows="4" name="description_ve" placeholder="Enter description" required></textarea>
                         </div>
                         <div class="form-group">
-                            <label for="description1">Digiceleb Description paragraph 1</label>
-                            <textarea id="description_line2" class="form-control" rows="4" name="description_line2" placeholder="Enter description" required></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label for="description2">Digiceleb Description paragraph 2</label>
-                            <textarea id="description_line3" class="form-control" rows="4" name="description_line3" placeholder="Enter description" required></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label for="image_dc1">Choose images 1</label>
+                            <label for="image_ve1">Choose image 1</label>
                             <div class="input-group">
                                 <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="image_dc1" name="image_dc1" required>
-                                    <label class="custom-file-label" for="image_dc1">Choose file</label>
+                                    <input type="file" class="custom-file-input" id="image_ve1" name="image_ve1" required>
+                                    <label class="custom-file-label" for="image_ve1">Choose file</label>
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="image_dc2">Choose images 2</label>
+                            <label for="image_ve2">Choose image 2</label>
                             <div class="input-group">
                                 <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="image_dc2" name="image_dc2" required>
-                                    <label class="custom-file-label" for="image_dc2">Choose file</label>
+                                    <input type="file" class="custom-file-input" id="image_ve2" name="image_ve2" required>
+                                    <label class="custom-file-label" for="image_ve2">Choose file</label>
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="instagram">Instagram link</label>
-                            <input type="text" class="form-control" id="instagram" name="instagram" placeholder="Enter instagram link" required>
+                            <label for="image_ve3">Choose image 3</label>
+                            <div class="input-group">
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="image_ve3" name="image_ve3" required>
+                                    <label class="custom-file-label" for="image_ve3">Choose file</label>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card-footer">
+                        <div class="form-group">
+                            <label for="image_ve4">Choose image 4</label>
+                            <div class="input-group">
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="image_ve4" name="image_ve4" required>
+                                    <label class="custom-file-label" for="image_ve4">Choose file</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="video_ve1">Choose video 1 (make sure format is .mp4)</label>
+                            <div class="input-group">
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="video_ve1" name="video_ve1" required>
+                                    <label class="custom-file-label" for="video_ve1">Choose file</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="video_ve2">Choose video 2 (make sure format is .mp4)</label>
+                            <div class="input-group">
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="video_ve2" name="video_ve2" required>
+                                    <label class="custom-file-label" for="video_ve2">Choose file</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="video_ve3">Choose video 3 (make sure format is .mp4)</label>
+                            <div class="input-group">
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="video_ve3" name="video_ve3">
+                                    <label class="custom-file-label" for="video_ve3">Choose file</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="video_ve4">Choose video 4 (make sure format is .mp4)</label>
+                            <div class="input-group">
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="video_ve4" name="video_ve4">
+                                    <label class="custom-file-label" for="video_ve4">Choose file</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="video_ve5">Choose video 5 (make sure format is .mp4)</label>
+                            <div class="input-group">
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="video_ve5" name="video_ve5">
+                                    <label class="custom-file-label" for="video_ve5">Choose file</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </div>
                 </form>
@@ -197,7 +248,7 @@
         </section>
         <!-- /.content -->
       </div>
-<script>
+      <script>
 document.addEventListener('DOMContentLoaded', function () {
     var inputs = document.querySelectorAll('.custom-file-input');
     Array.prototype.forEach.call(inputs, function(input) {
@@ -211,6 +262,7 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-      
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>        
+
+
       <?php  $this->load->view('templates/footer_admin');?>
