@@ -38,7 +38,7 @@
           <!-- Add icons to the links using the .nav-icon class
            with font-awesome or any other icon font library -->
            <li class="nav-item menu-open">
-            <a href="<?php echo base_url("c_admin2/index");?>" class="nav-link">
+            <a href="<?php echo base_url("c_admin2/");?>" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
@@ -144,7 +144,7 @@
                              alt="<?php echo $u->title_as; ?>" 
                              style="width: 100px; height: auto;"> </td>
                              <td>
-                          <a href="<?php echo site_url('#'); ?>" class="btn btn-warning a-btn-slide-text">
+                          <a href="<?php echo site_url('c_crud/edit_animatedshorts/'.$u->id_as); ?>" class="btn btn-warning a-btn-slide-text">
                             <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> 
                             <span><strong>Edit</strong></span>
                           </a>
