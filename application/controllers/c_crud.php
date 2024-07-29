@@ -65,7 +65,7 @@ class C_crud extends CI_Controller {
             echo "Gagal memperbarui data.";
         }
          
-        redirect('c_upload');
+        redirect('c_data/data_advertising');
     }
     
     public function edit_data_animatedshorts() {
