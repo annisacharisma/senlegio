@@ -63,7 +63,7 @@ class C_upload extends CI_Controller {
         $this->db->insert('advertising', $data);
 
         // Redirect to the main page
-        redirect('c_upload');
+        redirect('c_data/data_advertising');
     }
 
     public function index()
