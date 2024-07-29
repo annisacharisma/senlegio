@@ -120,7 +120,7 @@
                         <table class="table table-head-fixed text-nowrap">
                             <thead>
                                 <tr>
-                                    <th>Nomer</th>
+                                    <th>No.</th>
                                     <th>ID</th>
                                     <th>Judul</th>
                                     <th>Poster</th>
@@ -145,7 +145,7 @@
                                                 </a>
                                                 <a href="<?php echo site_url('c_admin2/data_advertising?hapus_ad='.$u->id_adv); ?>" class="btn btn-danger a-btn-slide-text">
                                                     <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> 
-                                                    <span><strong>Hapus</strong></span>
+                                                    <span><strong>Delete</strong></span>
                                                 </a>
                                             </td>
                                         </tr>
@@ -166,3 +166,5 @@
         <!-- /.content -->
     </div>
 </div>
+<?php  $this->load->view('templates/footer_admin');?>
+
