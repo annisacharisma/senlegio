@@ -148,7 +148,7 @@
                             <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> 
                             <span><strong>Edit</strong></span>
                           </a>
-                          <a href="<?php echo site_url('#'); ?>" class="btn btn-danger a-btn-slide-text">
+                          <a href="<?php echo site_url('c_admin2/data_visualeffects?hapus_ve='.$u->id_ve); ?>" class="btn btn-danger a-btn-slide-text">
                           <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> 
                           <span><strong>Delete</strong></span>
                           </a>
