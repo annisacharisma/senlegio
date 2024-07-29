@@ -128,10 +128,11 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php 
-                                    $no = 1;
-                                    foreach($poster_adv->result() as $u){ 
-                                        ?>
+                                    <?php 
+                                    if(!empty($datamu)) {
+                                        $no = 1;
+                                        foreach($datamu as $u){ 
+                                    ?>
                                         <tr>
                                             <td><?php echo $no++ ?></td>
                                             <td><?php echo $u->id_adv ?></td>
@@ -148,9 +149,12 @@
                                                 </a>
                                             </td>
                                         </tr>
-                                        <?php 
+                                    <?php 
+                                        }
+                                    } else {
+                                        echo "<tr><td colspan='5'>No data available</td></tr>";
                                     }
-                                ?>
+                                    ?>
                             </tbody>
                         </table>
                     </div>
