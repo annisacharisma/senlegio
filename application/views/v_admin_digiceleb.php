@@ -55,7 +55,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="<?php echo base_url("c_upload/index");?>" class="nav-link">
+                <a href="<?php echo base_url("c_data/data_advertising");?>" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Data Advertising</p>
                 </a>
@@ -150,7 +150,7 @@
                           </a>
                           <a href="<?php echo site_url('c_admin2/data_digiceleb?hapus_dc='.$u->id_dc); ?>" class="btn btn-danger a-btn-slide-text">
                           <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> 
-                          <span><strong>Hapus</strong></span>
+                          <span><strong>Delete</strong></span>
                           </a>
                         </td>
                                         </tr>
